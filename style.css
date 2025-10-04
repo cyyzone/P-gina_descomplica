@@ -1,0 +1,86 @@
+/* Importando uma fonte legal do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ----- Estilos Gerais (para a página toda) ----- */
+body {
+    background-color: #121212; /* Um fundo escuro, bem moderno */
+    color: #e0e0e0; /* Cor do texto principal (cinza claro) */
+    font-family: 'Roboto', sans-serif; /* A fonte que importamos */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ----- O Container Principal que segura tudo ----- */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #1e1e1e; /* Um cinza um pouco mais claro que o fundo */
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+/* ----- Cabeçalho (Título e Subtítulo) ----- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #bb86fc; /* Um roxo vibrante para o título */
+    margin: 0;
+}
+
+/* ----- Caixa de Texto ----- */
+textarea#texto-original {
+    width: 100%;
+    height: 150px;
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    resize: vertical; /* Permite que o usuário aumente a altura */
+    margin-bottom: 20px;
+}
+
+/* ----- Botão Principal ----- */
+button#botao-descomplicar {
+    width: 100%;
+    padding: 15px;
+    background-color: #bb86fc; /* Mesma cor roxa do título */
+    color: #121212; /* Texto escuro para contrastar */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease; /* Efeito suave na mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button#botao-descomplicar:hover {
+    background-color: #a365f7; /* Um roxo um pouco mais escuro */
+}
+
+/* ----- Área do Resultado ----- */
+#resultado {
+    margin-top: 30px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    border-left: 5px solid #bb86fc; /* Uma borda roxa na esquerda para destacar */
+}
+
+.placeholder {
+    color: #888888; /* Cor cinza para o texto de aviso */
+    font-style: italic;
+}

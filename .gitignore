@@ -1,0 +1,5 @@
+# Ignorar o arquivo que contém nossas chaves secretas
+.env
+
+# Ignorar as pastas de cache do Python
+__pycache__/
