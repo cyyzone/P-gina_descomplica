@@ -2,7 +2,7 @@
 
 Um tradutor de "adultês" para a linguagem da Geração Z. Este projeto é uma aplicação web que utiliza a API do Google Gemini para explicar tópicos complexos de estudo de forma simples, divertida e didática, usando analogias e uma linguagem atual para adolescentes.
 
-![Prévia do Descomplica](https://i.imgur.com/8Q898r7.png) 
+![Prévia do Descomplica]([https://i.imgur.com/8Q898r7.png](https://imgur.com/a/RPU3bNR]) 
 ---
 
 ## 🎯 Sobre o Projeto
