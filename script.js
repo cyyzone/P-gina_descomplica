@@ -1,9 +1,9 @@
-// ----- 1. Pegando os Elementos da Página (continua igual) -----
+// ----- 1. Pegando os Elementos da Página -----
 const botao = document.getElementById('botao-descomplicar');
 const textoOriginal = document.getElementById('texto-original');
 const areaResultado = document.getElementById('resultado');
 
-// ----- 2. Adicionando o "Ouvinte" de Evento (continua igual) -----
+// ----- 2. Adicionando o "Ouvinte" de Evento-----
 botao.addEventListener('click', () => {
     gerarExplicacao();
 });
@@ -17,11 +17,10 @@ async function gerarExplicacao() {
         return;
     }
 
-    // Mostra a mensagem de "carregando" (continua igual)
+    // Mostra a mensagem de "carregando"
     areaResultado.innerHTML = '<p>Ok, acionando a IA para criar a melhor explicação... 🚀</p>';
 
-    // --- A MUDANÇA PRINCIPAL ESTÁ AQUI ---
-    // Em vez de simular, vamos chamar nosso servidor Python usando fetch()
+
     try {
         const response = await fetch('http://127.0.0.1:5000/descomplicar', {
             method: 'POST', // Estamos enviando dados
@@ -35,9 +34,7 @@ async function gerarExplicacao() {
         const data = await response.json();
 
         if (response.ok) {
-            // Se tudo deu certo, mostra a explicação da IA
-            // Usamos replace para formatar as quebras de linha que a IA envia
-            // Linha Nova
+            // Se tudo deu certo, mostra a explicação formatada em HTML
             const htmlFormatado = marked.parse(data.explicacao);
             areaResultado.innerHTML = `<h3>Explicação Descomplicada:</h3>${htmlFormatado}`;
         } else {
@@ -46,7 +43,7 @@ async function gerarExplicacao() {
         }
 
     } catch (error) {
-        // Se não conseguimos nem nos conectar ao servidor, mostra este erro
+        // Se não conseguir nem conectar ao servidor, mostra este erro
         console.error("Erro na comunicação:", error);
         areaResultado.innerHTML = `<p><strong>Erro de conexão!</strong><br>Não consegui falar com o servidor local. Verifique se o arquivo 'app.py' está rodando no terminal.</p>`;
     }

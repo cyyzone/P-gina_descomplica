@@ -7,14 +7,11 @@ from dotenv import load_dotenv
 
 load_dotenv() # Esta função carrega as variáveis do arquivo .env
 
-# Criando o nosso aplicativo (o servidor)
+# Criando o  aplicativo (o servidor)
 app = Flask(__name__)
 CORS(app) # Aplicando o CORS para permitir a comunicação
 
-# --- A PARTE MAIS IMPORTANTE: SUA CHAVE SECRETA ---
-# Cole a sua Chave de API que você guardou, DENTRO DAS ASPAS
-# É MUITO IMPORTANTE que a chave fique aqui, no back-end, e não no javascript.
-# Pega a chave de API das variáveis de ambiente
+# Pegando a chave da API que está na variável de ambiente
 API_KEY = os.environ.get('GOOGLE_API_KEY')
 genai.configure(api_key=API_KEY)
 
